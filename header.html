@@ -1,0 +1,52 @@
+<header class="w-full bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="logo.png" alt="Logo" class="h-10 w-auto">
+      
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center space-x-10">
+      <nav class="flex space-x-10 text-sm font-semibold text-blue-900 uppercase">
+        <a href="About.html" class="hover:text-green-500">About</a>
+        <a href="Categories.html" class="hover:text-green-500">Categories</a>
+        <a href="Blogs.html" class="hover:text-green-500">Blogs</a>
+        <a href="Contact.html" class="hover:text-green-500">Contact</a>
+      </nav>
+
+      <!-- Bulk Order Button -->
+      <a href="#"
+         class="bg-blue-900 text-white text-xs font-semibold px-5 py-2 rounded-full hover:bg-blue-700 transition">
+        Bulk Order
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <!-- Hamburger icon -->
+        <svg class="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-white shadow-lg">
+    <a href="About.html" class="text-blue-900 font-semibold uppercase hover:text-green-500">About</a>
+    <a href="Categories.html" class="text-blue-900 font-semibold uppercase hover:text-green-500">Categories</a>
+    <a href="Blogs.html" class="text-blue-900 font-semibold uppercase hover:text-green-500">Blogs</a>
+    <a href="Contact.html" class="text-blue-900 font-semibold uppercase hover:text-green-500">Contact</a>
+    <a href="#"
+       class="bg-blue-900 text-white text-xs font-semibold px-5 py-2 rounded-full hover:bg-blue-700 transition">
+      Bulk Order
+    </a>
+  </div>
+</header>
+
+

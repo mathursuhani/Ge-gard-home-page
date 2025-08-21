@@ -1,54 +1,83 @@
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ge'Gard</title>
-    <!-- Font Awesome CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ge'Gard</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="slider.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div id="header"></div>
-    <main class="p-10">
-        <h1 class="text-3xl font-bold text-center text-blue-900">Welcome to ge'gard wellness</h1>
-    </main>
-    <div id="footer"></div>
+<body class="bg-white text-gray-900">
 
-    <script>
-        // Function to load components (header/footer)
-        async function loadComponent(id, file, callback) {
-            const response = await fetch(file);
-            const content = await response.text();
-            document.getElementById(id).innerHTML = content;
+  <div id="header"></div>
+  <div id="slider-section"></div>
 
-            // run callback after loading
-            if (callback) callback();
-        }
+  <main class="p-10">
+    <h1 class="text-3xl font-bold text-center text-blue-900">Welcome to Ge'Gard Wellness</h1>
+  </main>
 
-        // Load header and attach toggle logic after load
-        loadComponent("header", "header.html", () => {
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-            menuBtn.addEventListener("click", () => {
-                if(mobileMenu.classList.contains("max-h-0")){
-                    mobileMenu.classList.remove("max-h-0", "opacity-0");
-                    mobileMenu.classList.add("max-h-screen", "opacity-100");
-                }else{
-                    mobileMenu.classList.add("max-h-0","opacity-0");
-                    mobileMenu.classList.remove("max-h-screen", "opacity-100")
-                }
-            });
-            
+  <div id="footer"></div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // Function to load external components
+    async function loadComponent(id, file, callback) {
+      const response = await fetch(file);
+      const content = await response.text();
+      document.getElementById(id).innerHTML = content;
+      if (callback) callback();
+    }
+
+    // Load header
+    loadComponent("header", "header.html", () => {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("max-h-0");
+          mobileMenu.classList.toggle("opacity-0");
+          mobileMenu.classList.toggle("max-h-screen");
+          mobileMenu.classList.toggle("opacity-100");
         });
+      }
+    });
 
-        // Load footer (no JS needed here)
-        loadComponent("footer", "footer.html");
-    </script>
+    // Load slider
+    loadComponent("slider-section", "slider.html", () => {
+      // ✅ Slider tabhi initialize hoga jab slider.html load ho chuka hoga
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    });
+
+    // Load footer
+    loadComponent("footer", "footer.html");
+  </script>
 
 </body>
-
 </html>
+

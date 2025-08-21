@@ -6,53 +6,10 @@
   color: #fff;                 /* White arrow */
 }
 
-/* Default (Desktop / Large screens) */
-.swiper-button-prev,
-.swiper-button-next {
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.swiper-button-prev {
-  left: 20px; /* thoda gap */
-  right: auto;
-  bottom: auto;
-}
 
-.swiper-button-next {
-  right: 20px;
-  left: auto;
-  bottom: auto;
-}
 
-/* ✅ Mobile/Tablet: Arrows bottom center */
-@media (max-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    top: auto;
-    bottom: 15px; /* thoda upar uthake */
-    transform: none;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-  }
 
-  .swiper-button-prev {
-    left: 45%;
-    right: auto;
-  }
 
-  .swiper-button-next {
-    left: 55%;
-    right: auto;
-  }
-}
 
 

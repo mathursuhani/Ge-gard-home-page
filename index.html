@@ -91,14 +91,15 @@
 
     //Load Cards
     loadComponent("cards-section", "cards.html", () => {
-      function toggleIcon(btn) {
-        if (btn.innerHTML.trim() === "↗") {
-          btn.innerHTML = "↓";
-        } else {
-          btn.innerHTML = "↗";
-        }
-      }
-    })
+        window.toggleIcon = function (btn) {
+          if (btn.innerText.trim() === "↗") {
+            btn.innerText = "↘"; // change to down-right
+          } else {
+            btn.innerText = "↗"; // change back to up-right
+          }
+        };
+      });
+
 
     // Load footer
     loadComponent("footer", "footer.html");

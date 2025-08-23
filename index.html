@@ -42,17 +42,26 @@
 
     // Load header
     loadComponent("header", "header.html", () => {
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener("click", () => {
-          mobileMenu.classList.toggle("max-h-0");
-          mobileMenu.classList.toggle("opacity-0");
-          mobileMenu.classList.toggle("max-h-screen");
-          mobileMenu.classList.toggle("opacity-100");
-        });
-      }
-    });
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener("click", () => {
+            const isHidden = mobileMenu.classList.contains("opacity-0");
+
+            if (isHidden) {
+              // OPEN
+              mobileMenu.classList.remove("opacity-0", "max-h-0", "py-0");
+              mobileMenu.classList.add("opacity-100", "max-h-screen", "py-6");
+            } else {
+              // CLOSE
+              mobileMenu.classList.add("opacity-0", "max-h-0", "py-0");
+              mobileMenu.classList.remove("opacity-100", "max-h-screen", "py-6");
+            }
+          });
+        }
+      });
+
 
     // Load slider
     loadComponent("slider-section", "slider.html", () => {

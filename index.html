@@ -21,7 +21,7 @@
 
   <div id="header"></div>
   <div id="slider-section"></div>
-
+  <div id="cards-section"></div>
   <main class="p-10">
     <h1 class="text-3xl font-bold text-center text-blue-900">Welcome to Ge'Gard Wellness</h1>
   </main>
@@ -89,6 +89,16 @@
             });
         });
 
+    //Load Cards
+    loadComponent("cards-section", "cards.html", () => {
+      function toggleIcon(btn) {
+        if (btn.innerHTML.trim() === "↗") {
+          btn.innerHTML = "↓";
+        } else {
+          btn.innerHTML = "↗";
+        }
+      }
+    })
 
     // Load footer
     loadComponent("footer", "footer.html");

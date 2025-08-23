@@ -149,6 +149,33 @@
           showSection("cosmetic-img-container", "cosmetic-card");
         });
 
+        //Category Filter Logic (inside medicine-section)
+        const categoryButtons = document.querySelectorAll("#category-buttons button");
+        const products = document.querySelectorAll("#product-grid .border");
+
+        categoryButtons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            const category = btn.innerText.toLowerCase();
+
+            products.forEach(product => {
+              const productCategory = product.getAttribute("data-category");
+
+              if (category === "all products") {
+                product.style.display = "block";  // sab dikhao
+              } else {
+                product.style.display =
+                  productCategory === category ? "block" : "none"; // sirf match hua dikhana
+              }
+            });
+
+            // ✅ Active button style toggle
+            categoryButtons.forEach(b => b.classList.remove("bg-green-500"));
+            categoryButtons.forEach(b => b.classList.add("bg-blue-900"));
+            btn.classList.remove("bg-blue-900");
+            btn.classList.add("bg-green-500");
+          });
+        });
+
       });
 
 

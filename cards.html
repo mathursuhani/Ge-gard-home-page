@@ -1,3 +1,4 @@
+<!--category section-->
 <section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-6">
     
@@ -5,7 +6,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
     <!-- Medicine -->
-    <div class="relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-2xl scale-110">
+    <div id="medicine-card" class="card relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-2xl scale-110">
         <!-- Image -->
         <img src="Medicine image.jpg" class="w-full h-80 object-cover" />
     
@@ -24,22 +25,24 @@
             <!-- Button inside cut -->
             <button
                 class="absolute mr-2 mb-2 bottom-0 right-0 bg-blue-900 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-300"
-                onclick="toggleIcon(this)">
-                ↗
+                onclick="toggleCard(this)">
+                <span class="icon">↗</span>
             </button>
         </div>
     </div>
 
 
       <!-- Nutraceuticals -->
-    <div class="relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-lg 
-            transform transition-all duration-300 hover:shadow-2xl hover:scale-110">
+    <div id="nutra-card" class="card relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white 
+                transform transition-all duration-300 hover:shadow-2xl hover:scale-110 cursor-pointer">
+    
         <!-- Image -->
         <img src="nutraceuticals.jpeg" class="w-full h-80 object-cover" />
     
         <!-- Gradient & Title -->
         <div class="absolute inset-0 flex flex-col justify-end">
-            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-900/100 via-blue-900/40 to-transparent flex items-end justify-center p-4">
+            <div
+                class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-900/100 via-blue-900/40 to-transparent flex items-end justify-center p-4">
                 <h2 class="text-white font-bold text-lg">NUTRACEUTICALS</h2>
             </div>
         </div>
@@ -52,14 +55,14 @@
             <!-- Button inside cut -->
             <button
                 class="absolute mr-2 mb-2 bottom-0 right-0 bg-blue-900 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-300"
-                onclick="toggleIcon(this)">
-                ↗
+                onclick="toggleCard(this)">
+                <span class="icon">↗</span>
             </button>
         </div>
     </div>
 
       <!-- Perfume -->
-    <div class="relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-lg 
+    <div id="perfume-card" class="card relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-lg 
             transform transition-all duration-300 hover:shadow-2xl hover:scale-110">
         <!-- Image -->
         <img src="Perfume.jpg" class="w-full h-80 object-cover" />
@@ -79,14 +82,14 @@
             <!-- Button inside cut -->
             <button
                 class="absolute mr-2 mb-2 bottom-0 right-0 bg-blue-900 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-300"
-                onclick="toggleIcon(this)">
-                ↗
+                onclick="toggleCard(this)">
+                <span class="icon">↗</span>
             </button>
         </div>
     </div>
 
       <!-- Cosmetics -->
-    <div class="relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-lg 
+    <div id="cosmetic-card" class="card relative h-[400px] rounded-[45px] overflow-hidden shadow-lg bg-white shadow-lg 
             transform transition-all duration-300 hover:shadow-2xl hover:scale-110">
         <!-- Image -->
         <img src="Cosmetics.jpg" class="w-full h-80 object-cover" />
@@ -106,8 +109,8 @@
             <!-- Button inside cut -->
             <button
                 class="absolute mr-2 mb-2 bottom-0 right-0 bg-blue-900 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-300"
-                onclick="toggleIcon(this)">
-                ↗
+                onclick="toggleCard(this)">
+                <span class="icon">↗</span>
             </button>
         </div>
     </div>
@@ -116,13 +119,95 @@
   </div>
 </section>
 
+<!--Medicine products section-->
+<section id="medicine-section" class="max-w-7xl mx-auto px-6 ">
+  <div class="flex flex-wrap justify-center gap-3 py-6">
+    <button class="px-4 py-2 bg-green-500 text-white rounded-xl">ALL PRODUCTS</button>
+    <button class="px-4 py-2 bg-blue-900 text-white rounded-xl">SYRUP</button>
+    <button class="px-4 py-2 bg-blue-900 text-white rounded-xl">CAPSULES</button>
+    <button class="px-4 py-2 bg-blue-900 text-white rounded-xl">TABLETS</button>
+    <button class="px-4 py-2 bg-blue-900 text-white rounded-xl">CREAM</button>
+    <button class="px-4 py-2 bg-blue-900 text-white rounded-xl">ORAL CARE</button>
+    <button class="px-4 py-2 bg-blue-900 text-white rounded-xl">DROP</button>
+  </div>
 
-
-
-
-
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med1webp.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Dermasure Oz</h3>
+        <p class="text-gray-400 line-through">₹135.00</p>
+        <p class="text-blue-700 font-bold">₹120.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med2.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Dermasure Kt</h3>
+        <p class="text-gray-400 line-through">₹125.00</p>
+        <p class="text-blue-700 font-bold">₹110.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med3.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Gerelief-Sp Tablet</h3>
+        <p class="text-gray-400 line-through">₹165.00</p>
+        <p class="text-blue-700 font-bold">₹140.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med4.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Upgard-D3 Sachet</h3>
+        <p class="text-gray-400 line-through">₹59.00</p>
+        <p class="text-blue-700 font-bold">₹42.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med5.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Gerelief-Ds</h3>
+        <p class="text-gray-400 line-through">₹55.00</p>
+        <p class="text-blue-700 font-bold">₹42.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med6.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Dicogard Tablets</h3>
+        <p class="text-gray-400 line-through">₹158.00</p>
+        <p class="text-blue-700 font-bold">₹125.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med7.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Alumcidge-Mps</h3>
+        <p class="text-gray-400 line-through">₹85.00</p>
+        <p class="text-blue-700 font-bold">₹75.00</p>
+    </div>
+    
+    <div class="border rounded-2xl p-4 text-center shadow hover:shadow-lg transition">
+        <img src="Med8.webp" alt="Product" class="w-40 h-32 mx-auto object-contain">
+        <h3 class="font-semibold mt-4">Diguard Syrup-Fungal Diastase</h3>
+        <p class="text-gray-400 line-through">₹120.00</p>
+        <p class="text-blue-700 font-bold">₹112.00</p>
+    </div>
 
     
-    
+  </div>
+    <div class="flex justify-center mt-6 ">
+        <button id="loadMoreBtn" class="px-6 py-2 bg-blue-900 text-white rounded-full shadow hover:bg-blue-800">
+            LOAD MORE ↘
+        </button>
+    </div>
+</section>
 
+<!--Nutraceuticals products section-->
+<div id="nutra-img-container" class="hidden mt-4">
+    <img src="nutra1.webp" class="w-full max-w-md mx-auto rounded-2xl shadow-lg" />
+</div>
 
+<!--Perfume-card products section-->
+<div id="perfume-img-container" class="hidden mt-4">
+    <img src="Per1.jpg" class="w-full max-w-md mx-auto rounded-2xl shadow-lg" />
+</div>
+
+<!--Cosmetics products container-->
+<div id="cosmetic-img-container" class="hidden mt-4">
+    <img src="cos1.webp" class="w-full max-w-md mx-auto rounded-2xl shadow-lg" />
+</div>

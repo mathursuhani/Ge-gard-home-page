@@ -14,6 +14,18 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="slider.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <style>
+    /* Increase height of carousel items */
+    .owl-carousel .item img {
+      height: 250px;
+      /* increase this height as needed */
+      object-fit: cover;
+    }
+  </style>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -24,6 +36,7 @@
   <div id="cards-section"></div>
   <div id="timer-section"></div>
   <div id="card-section"></div>
+  <div id="video-section"></div>
 
   <main class="p-10">
     <h1 class="text-3xl font-bold text-center text-blue-900">Welcome to Ge'Gard Wellness</h1>
@@ -234,9 +247,47 @@
     
     //Load card
       loadComponent("card-section", "Card.html");
+
+    //Load Video
+      loadComponent("video-section", "Video.html", () => {
+          window.openVideo = function (videoId) {
+            const iframe = document.getElementById('youtubeFrame');
+            iframe.src = `https://www.youtube.com/embed/msvDIu-dsC0?autoplay=1`;
+            document.getElementById('videoModal').classList.remove('hidden');
+          }
+
+          window.closeVideo = function () {
+            const iframe = document.getElementById('youtubeFrame');
+            iframe.src = '';
+            document.getElementById('videoModal').classList.add('hidden');
+          }
+
+          $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+              items: 2,
+              loop: true,
+              margin: 20,
+              nav: true,
+              dots: true,
+              responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 4 }
+              }
+            });
+          });
+        });
+
+
+
     // Load footer
     loadComponent("footer", "footer.html");
   </script>
+  <!-- jQuery (required for Owl Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 </body>
 </html>

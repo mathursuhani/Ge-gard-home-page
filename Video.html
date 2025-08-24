@@ -1,0 +1,87 @@
+<section class="relative w-full h-[500px]">
+    <!-- Background Image -->
+    <img src="vdo-img.jpg" alt="Video Thumbnail" class="w-full h-full object-cover" />
+
+    <!-- Overlay with Play Button -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <button onclick="openVideo()"
+            class="bg-white bg-opacity-70 hover:bg-opacity-90 text-blue-600 p-5 rounded-full shadow-lg transition">
+            <!-- New Visible Play Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.5 5.5v9l7-4.5-7-4.5z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- YouTube Modal -->
+    <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative w-full max-w-4xl aspect-video">
+            <iframe id="youtubeFrame" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            <!-- Close Button -->
+            <button onclick="closeVideo()" class="absolute top-2 right-2 text-white text-3xl font-bold">×</button>
+        </div>
+    </div>
+</section>
+
+<section class="py-10 bg-white">
+  <div class="container mx-auto px-4 text-center mb-8">
+    <h3 class="text-3xl font-bold text-blue-800">TRUSTED BY THOUSANDS, PROVEN BY RESULTS</h3>
+    <h3 class="text-3xl font-bold text-blue-800">HEAR IT FROM OUR PARTNERS</h3>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="owl-carousel owl-theme">
+      <!-- Video items -->
+      <div class="item relative cursor-pointer" onclick="openVideo('msvDIu-dsC0')">
+        <img src="https://img.youtube.com/vi/msvDIu-dsC0/hqdefault.jpg" alt="Video 1" class="rounded-lg w-full" />
+        <div class="absolute inset-0 flex justify-center items-center">
+          <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="42" r="42" fill="black" fill-opacity="0.5"/>
+            <path d="M33 27L57 42L33 57V27Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="item relative cursor-pointer" onclick="openVideo('msvDIu-dsC0')">
+        <img src="https://img.youtube.com/vi/msvDIu-dsC0/hqdefault.jpg" alt="Video 2" class="rounded-lg w-full" />
+        <div class="absolute inset-0 flex justify-center items-center">
+          <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="42" r="42" fill="black" fill-opacity="0.5"/>
+            <path d="M33 27L57 42L33 57V27Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="item relative cursor-pointer" onclick="openVideo('msvDIu-dsC0')">
+        <img src="https://img.youtube.com/vi/msvDIu-dsC0/hqdefault.jpg" alt="Video 3" class="rounded-lg w-full" />
+        <div class="absolute inset-0 flex justify-center items-center">
+          <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="42" r="42" fill="black" fill-opacity="0.5"/>
+            <path d="M33 27L57 42L33 57V27Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="item relative cursor-pointer" onclick="openVideo('msvDIu-dsC0')">
+        <img src="https://img.youtube.com/vi/msvDIu-dsC0/hqdefault.jpg" alt="Video 4" class="rounded-lg w-full" />
+        <div class="absolute inset-0 flex justify-center items-center">
+          <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="42" r="42" fill="black" fill-opacity="0.5"/>
+            <path d="M33 27L57 42L33 57V27Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video modal -->
+  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div class="relative w-full max-w-4xl p-4">
+      <button onclick="closeVideo()" class="absolute top-2 right-2 text-white text-3xl font-bold">&times;</button>
+      <iframe id="youtubeFrame" class="w-full aspect-video rounded-lg" src="" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

@@ -23,7 +23,7 @@
   <div id="slider-section"></div>
   <div id="cards-section"></div>
   <div id="timer-section"></div>
-
+  <div id="card-section"></div>
 
   <main class="p-10">
     <h1 class="text-3xl font-bold text-center text-blue-900">Welcome to Ge'Gard Wellness</h1>
@@ -231,7 +231,9 @@
         endDate.setDate(endDate.getDate() + 37); // 37 din baad tak countdown
         startCountdown(endDate);
       });
-
+    
+    //Load card
+      loadComponent("card-section", "Card.html");
     // Load footer
     loadComponent("footer", "footer.html");
   </script>

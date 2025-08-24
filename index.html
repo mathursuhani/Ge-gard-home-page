@@ -13,18 +13,71 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="slider.css">
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- OWL Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <style>
-    /* Increase height of carousel items */
-    .owl-carousel .item img {
-      height: 250px;
-      /* increase this height as needed */
+    body{
+      overflow-x: hidden;
+    }
+    /* General Item Styling */
+    .owl-carousel .item {
+      height: 450px;
+      /* 🔼 Adjust height as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    /* Video Styling */
+    .owl-carousel .item video {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
       object-fit: cover;
+      /* Ensures video fills space properly */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  
+    /* Remove internal item padding */
+    .owl-carousel .item {
+      padding: 0;
+      margin: 0;
+    }
+  
+    /* Left & Right edge padding for first and last items */
+    .owl-carousel .item:first-child {
+      padding-left: 16px;
+      /* 👈 Left padding for first item */
+    }
+  
+    .owl-carousel .item:last-child {
+      padding-right: 16px;
+      /* 👉 Right padding for last item */
+    }
+  
+    /* Optional: Reduce margin between items */
+    .owl-carousel .owl-stage-outer {
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+  
+    /* Owl nav buttons */
+    .owl-carousel .owl-nav button {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: #4B5563;
+      /* Tailwind gray-700 */
+    }
+  
+    .owl-carousel .owl-nav button:hover {
+      color: #1F2937;
+      /* Tailwind gray-900 */
     }
   </style>
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -36,6 +89,64 @@
   <div id="timer-section"></div>
   <div id="card-section"></div>
   <div id="video-section"></div>
+
+  <div class="container mt-8 mx-auto px-4 text-center mb-8">
+    <h3 class="text-3xl font-bold text-blue-800">TRUSTED BY THOUSANDS, PROVEN BY RESULTS</h3>
+    <h3 class="text-3xl font-bold text-blue-800">HEAR IT FROM OUR PARTNERS</h3>
+  </div>
+  <div class="container mt-6 mx-auto">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <video controls class="mx-auto">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item">
+                <video controls class="mx-auto">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item">
+                <video controls class="mx-auto">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item">
+                <video controls class="mx-auto">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- OWL Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 0,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    640: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 4
+                    }
+                }
+            });
+        });
+    </script>
+    
   <div id="lastCard-section"></div>
   
 
@@ -259,20 +370,7 @@
             document.getElementById('videoModal').classList.add('hidden');
           }
 
-          $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-              items: 2,
-              loop: true,
-              margin: 20,
-              nav: true,
-              dots: true,
-              responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 4 }
-              }
-            });
-          });
+          
         });
 
     //Last Card
@@ -282,11 +380,7 @@
     // Load footer
     loadComponent("footer", "footer.html");
   </script>
-  <!-- jQuery (required for Owl Carousel) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
-  <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 </body>
 </html>

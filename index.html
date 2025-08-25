@@ -19,9 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <style>
-    body{
-      overflow-x: hidden;
-    }
+    
     /* General Item Styling */
     .owl-carousel .item {
       height: 450px;
@@ -81,7 +79,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 overflow-x-hidden">
 
   <div id="header"></div>
   <div id="slider-section"></div>
@@ -90,38 +88,41 @@
   <div id="card-section"></div>
   <div id="video-section"></div>
 
-  <div class="container mt-8 mx-auto px-4 text-center mb-8">
-    <h3 class="text-3xl font-bold text-blue-800">TRUSTED BY THOUSANDS, PROVEN BY RESULTS</h3>
-    <h3 class="text-3xl font-bold text-blue-800">HEAR IT FROM OUR PARTNERS</h3>
-  </div>
-  <div class="container mt-6 mx-auto">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <video controls class="mx-auto">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="item">
-                <video controls class="mx-auto">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="item">
-                <video controls class="mx-auto">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="item">
-                <video controls class="mx-auto">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
+  <div class="px-4 max-w-7xl mx-auto"> <!-- ye wrapper -->
+    <div class="container mt-8 mx-auto text-center mb-8">
+      <h3 class="text-3xl font-bold text-blue-800">TRUSTED BY THOUSANDS, PROVEN BY RESULTS</h3>
+      <h3 class="text-3xl font-bold text-blue-800">HEAR IT FROM OUR PARTNERS</h3>
     </div>
+    <div class="container mt-6 mx-auto">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <video controls class="mx-auto">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="item">
+          <video controls class="mx-auto">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="item">
+          <video controls class="mx-auto">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="item">
+          <video controls class="mx-auto">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- OWL Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

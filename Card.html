@@ -125,15 +125,17 @@
   
           <!-- Product 1 -->
           <div class="bg-[#DCEAFF] relative rounded-[30px] p-6 shadow-lg flex flex-col items-center min-h-[400px] w-full">
-            <!-- Image + Heart + Discount Badge -->
-            <div class="relative w-full flex justify-center">
-              <!-- ❤️ Heart Icon -->
-              <button class="absolute top-4 right-4 z-10 text-gray-400 hover:text-red-500 transition">
-                <i class="fa-regular fa-heart text-xl"></i>
-              </button>
+          
+            <!-- ❤️ Heart Icon - Moved Outside the Image Layer -->
+            <button class="absolute top-4 right-4 z-20 text-gray-400 hover:text-red-500 transition">
+              <i class="fa-regular fa-heart text-xl"></i>
+            </button>
+          
+            <!-- Product Image + Badge -->
+            <div class="relative w-full flex justify-center mt-10"> <!-- Added margin-top to push image down -->
           
               <!-- Product Image -->
-              <img src="Med5.webp" alt="Gerelief" class="h-64 w-auto object-contain mb-4 mt-7" />
+              <img src="Med5.webp" alt="Gerelief" class="h-64 w-auto object-contain mb-4" />
           
               <!-- 🔖 Discount Badge -->
               <div
@@ -146,7 +148,9 @@
             <h3 class="text-[#002A5C] font-bold text-center text-lg">GERELIEF - DS</h3>
             <p class="text-gray-400 line-through text-sm mt-2">₹55.00</p>
             <p class="text-[#002A5C] font-bold text-xl">₹42.00</p>
+          
           </div>
+
 
   
           <!-- Middle Column with desktop-only heading -->
@@ -155,14 +159,16 @@
               OUR <br /> BEST SELLER
             </h2>
           
-            <div class="bg-[#DCEAFF] relative rounded-[30px] p-4 sm:p-6 shadow-lg flex flex-col items-center min-h-[250px] w-full">
-              <!-- Image + Heart Icon + Discount Badge -->
-              <div class="relative w-full flex justify-center">
-                <!-- ❤️ Heart Icon -->
-                <button class="absolute top-3 right-3 z-20 text-gray-400 hover:text-red-500 transition">
-                  <i class="fa-regular fa-heart text-xl"></i>
-                </button>
+            <div
+              class="bg-[#DCEAFF] relative rounded-[30px] p-4 sm:p-6 shadow-lg flex flex-col items-center min-h-[250px] w-full">
           
+              <!-- ❤️ Heart Icon - Moved outside image area -->
+              <button class="absolute top-4 right-4 z-20 text-gray-400 hover:text-red-500 transition">
+                <i class="fa-regular fa-heart text-xl"></i>
+              </button>
+          
+              <!-- Image + Discount Badge -->
+              <div class="relative w-full flex justify-center mt-10"> <!-- ✅ Added margin to push image below heart -->
                 <!-- Product Image -->
                 <img src="Med2.webp" alt="Gesensfix" class="h-56 w-auto object-contain mb-4" />
           
@@ -180,18 +186,21 @@
             </div>
           </div>
 
+
   
           <!-- Product 3 -->
           <div class="bg-[#DCEAFF] relative rounded-[30px] p-6 shadow-lg flex flex-col items-center min-h-[400px]">
-            <!-- Image container with heart and discount -->
-            <div class="relative w-full flex justify-center">
-              <!-- ❤️ Wishlist Heart Icon -->
-              <button class="absolute top-4 right-4 z-20 text-gray-400 hover:text-red-500 transition">
-                <i class="fa-regular fa-heart text-xl"></i>
-              </button>
+          
+            <!-- ❤️ Wishlist Heart Icon - stays at card's top-right -->
+            <button class="absolute top-4 right-4 z-20 text-gray-400 hover:text-red-500 transition">
+              <i class="fa-regular fa-heart text-xl"></i>
+            </button>
+          
+            <!-- Image container with discount -->
+            <div class="relative w-full flex justify-center mt-10"> <!-- ✅ added margin to push image below heart -->
           
               <!-- 🖼️ Product Image -->
-              <img src="Med7.webp" alt="Alumcidge" class="h-64 w-auto object-contain mb-4 mt-7" />
+              <img src="Med7.webp" alt="Alumcidge" class="h-64 w-auto object-contain mb-4" />
           
               <!-- 🔖 Discount Badge -->
               <div
@@ -204,7 +213,9 @@
             <h3 class="text-[#002A5C] font-bold text-center">ALUMCIDGE-MPS</h3>
             <p class="text-gray-400 line-through text-sm mt-1">₹85.00</p>
             <p class="text-[#002A5C] font-bold text-lg">₹75.00</p>
+          
           </div>
+
         </div>
         <!-- EXPLORE BUTTON -->
         <div class="mt-6 sm:mt-8 flex justify-center">
